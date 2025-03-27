@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             panelTop = new Panel();
-            panel2 = new Panel();
             labelUsers = new Label();
+            panel2 = new Panel();
+            labelInfAboutUsers = new Label();
             panelTop.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panelTop
@@ -39,22 +41,11 @@
             panelTop.Controls.Add(labelUsers);
             panelTop.Dock = DockStyle.Top;
             panelTop.Location = new Point(10, 10);
-            panelTop.Margin = new Padding(5, 5, 5, 5);
+            panelTop.Margin = new Padding(5);
             panelTop.Name = "panelTop";
             panelTop.Padding = new Padding(10);
             panelTop.Size = new Size(664, 100);
             panelTop.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            panel2.Dock = DockStyle.Fill;
-            panel2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            panel2.Location = new Point(10, 110);
-            panel2.Margin = new Padding(5, 5, 5, 5);
-            panel2.Name = "panel2";
-            panel2.Padding = new Padding(10);
-            panel2.Size = new Size(664, 441);
-            panel2.TabIndex = 1;
             // 
             // labelUsers
             // 
@@ -66,6 +57,26 @@
             labelUsers.Text = "Список пользователей:";
             labelUsers.TextAlign = ContentAlignment.TopCenter;
             // 
+            // panel2
+            // 
+            panel2.Controls.Add(labelInfAboutUsers);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            panel2.Location = new Point(10, 110);
+            panel2.Margin = new Padding(5);
+            panel2.Name = "panel2";
+            panel2.Padding = new Padding(10);
+            panel2.Size = new Size(664, 441);
+            panel2.TabIndex = 1;
+            // 
+            // labelInfAboutUsers
+            // 
+            labelInfAboutUsers.Dock = DockStyle.Fill;
+            labelInfAboutUsers.Location = new Point(10, 10);
+            labelInfAboutUsers.Name = "labelInfAboutUsers";
+            labelInfAboutUsers.Size = new Size(644, 421);
+            labelInfAboutUsers.TabIndex = 0;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
@@ -75,12 +86,13 @@
             Controls.Add(panel2);
             Controls.Add(panelTop);
             Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             Name = "FormMain";
             Padding = new Padding(10);
             Text = "Пользователи";
             Load += FormMain_Load;
             panelTop.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -89,5 +101,6 @@
         private Panel panelTop;
         private Panel panel2;
         private Label labelUsers;
+        private Label labelInfAboutUsers;
     }
 }
